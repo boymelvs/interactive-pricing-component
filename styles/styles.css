@@ -217,7 +217,7 @@ header {
 .billing {
    display: flex;
    align-items: center;
-   justify-content: end;
+   justify-content: flex-end;
    gap: 1rem; /* between montly toggle & yearly */
    width: 100%;
    padding: 0 0.5rem;
@@ -226,7 +226,6 @@ header {
 
 @media (min-width: 768px) {
    .billing {
-      justify-content: flex-end;
       gap: 3.5rem; /* between montly toggle & yearly */
    }
 }
@@ -240,12 +239,6 @@ header {
    background: var(--light-grayish-blue-toggle);
    outline: none;
    cursor: pointer;
-}
-
-@media (min-width: 768px) {
-   #switch_billing {
-      width: 100%;
-   }
 }
 
 #switch_billing:checked {
