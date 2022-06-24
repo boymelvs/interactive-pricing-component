@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="this is solution to interactive pricing component challenge from frontend mentor" />
+      <meta name="keyword" content="html, css, flexbox, grid, javascript" />
+      <meta name="author" content="melvin" />
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+      <link rel="stylesheet" href="./styles/styles.css" />
+
+      <title>Frontend Mentor | Interactive pricing component</title>
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <div class="title_container">
+               <h1 class="title">Simple, traffic-based pricing</h1>
+               <p>Sign-up for our 30-day trial.</p>
+               <p>No credit card required.</p>
+            </div>
+         </header>
+
+         <main class="main_content">
+            <div class="pricing_container">
+               <div class="pageviews_price_container">
+                  <div class="views"><span class="num_views">100K</span> PAGEVIEWS</div>
+
+                  <input type="range" name="price_range" id="price_range" class="price_range input" value="50" max="100" step="25" />
+
+                  <div class="pricing">$<span class="price">16.00</span><span class="per_month"> / month</span></div>
+               </div>
+
+               <div class="billing">
+                  <div class="monthly">Monthly Billing</div>
+
+                  <input type="checkbox" id="switch_billing" class="toggle input" />
+
+                  <div class="yearly">
+                     <p class="yearly_billing">Yearly Billing</p>
+                     <p class="discount_amount">-25% <span class="discount"> discount</span></p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="benefits">
+               <div class="include">
+                  <p><img src="./images/icon-check.svg" alt="check" />Unlimited websites</p>
+                  <p><img src="./images/icon-check.svg" alt="check" />100% data ownership</p>
+                  <p><img src="./images/icon-check.svg" alt="check" />Email reports</p>
+               </div>
+
+               <div class="trial_btn_container">
+                  <button type="button" class="trial_btn">Start my trial</button>
+               </div>
+            </div>
+         </main>
+
+         <footer class="footer">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer noopener">Frontend Mentor</a>. Coded by
+            <a href="https://github.com/boymelvs" target="_blank" rel="noreferrer noopener">boymelvs</a>.
+         </footer>
+      </div>
+
+      <script src="./scripts/index.js"></script>
+   </body>
+</html>

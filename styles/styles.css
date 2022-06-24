@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   /* primary */
+   --soft-cyan: hsl(174, 77%, 80%); /* full slider bar */
+   --strong-cyan: hsl(174, 86%, 45%); /* slider background */
+   --light-grayish-red: hsl(14, 92%, 95%); /* discount background */
+   --light-red: hsl(15, 100%, 70%); /* discount text */
+   --pale-blue: hsl(226, 100%, 87%); /* CTA text */
+
+   /* neutral */
+   --white: hsl(0, 0%, 100%); /* pricing component background */
+   --very-pale-blue: hsl(230, 100%, 99%); /* main background */
+   --very-pale-blue-back: rgb(250, 251, 255); /* main background */
+   --light-grayish-blue-empty: hsl(224, 65%, 95%); /* empty slider bar */
+   --light-grayish-blue-toggle: hsl(223, 50%, 87%); /* toggle background */
+   --grayish-blue: hsl(225, 20%, 60%); /* text */
+   --dark-saturated-blue: hsl(227, 35%, 25%); /* text & CTA background */
+
+   /* font */
+   --font-fam-manrope: "Manrope", sans-serif;
+   --font-fam-monospace: "Mono Space", monospace;
+   --font-size-10: 62.5%; /* 10px */
+   --font-weight-400: 400;
+   --font-weight-600: 600;
+   --font-weight-700: 700;
+   --font-weight-800: 800;
+}
+
+html {
+   font-size: var(--font-size-10);
+   scroll-behavior: smooth;
+}
+
+body {
+   font-size: 1.5rem;
+   font-family: var(--font-fam-manrope);
+   font-weight: var(--font-weight-600);
+   background: var(--very-pale-blue);
+   color: var(--grayish-blue);
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 3rem; /* between header main & footer */
+   min-height: 100vh;
+   min-width: 32rem;
+   width: 100%;
+}
+
+header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-bottom-left-radius: 17rem;
+   background: hsl(222, 87%, 97%);
+   padding: 8rem 0rem 20rem 0rem;
+
+   background-image: url("../images/pattern-circles.svg");
+   background-repeat: no-repeat;
+   background-position: top 4rem center;
+   width: 100%;
+   height: 100%;
+   max-width: 144rem;
+}
+
+.title_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.5rem; /* between title & intro paragraph */
+   text-align: center;
+}
+
+.title {
+   font-size: 2rem;
+   color: var(--dark-saturated-blue);
+}
+
+.main_content {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem; /* between pricing container & benefits */
+
+   margin-top: -17rem;
+   padding: 3rem 0rem;
+   border-radius: 1rem;
+   background: var(--white);
+   max-width: 34rem;
+   width: 100%;
+   font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+   .main_content {
+      max-width: 45rem;
+   }
+}
+
+.pricing_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem; /* between pageviews_container & billing */
+   padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+   .pricing_container {
+      position: relative;
+      padding: 0 3rem;
+      gap: 5rem; /* between pageviews_container & billing */
+   }
+}
+
+.pageviews_price_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4rem; /* between 100kpagviews slider & pricing */
+   width: 100%;
+}
+
+.views {
+   font-size: 1.5rem;
+   text-align: center;
+   letter-spacing: 0.2rem;
+   font-weight: var(--font-weight-700);
+}
+
+@media (min-width: 768px) {
+   .views {
+      position: absolute;
+      top: 1rem;
+      left: 3rem;
+      text-align: left;
+   }
+}
+
+#price_range {
+   appearance: none;
+   width: 100%;
+   height: 1rem;
+   background: linear-gradient(90deg, var(--soft-cyan) 50%, var(--light-grayish-blue-empty) 50%);
+   border-radius: 2rem;
+   outline: none;
+}
+
+@media (min-width: 768px) {
+   #price_range {
+      margin-top: 10rem;
+   }
+}
+
+#price_range::-webkit-slider-thumb {
+   appearance: none;
+   width: 4rem;
+   height: 4rem;
+   background: var(--strong-cyan);
+   border-radius: 50%;
+   background-image: url("../images/icon-slider.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 60%;
+   cursor: pointer;
+}
+
+#price_range::-webkit-slider-thumb:active {
+   appearance: none;
+   width: 4rem;
+   height: 4rem;
+   opacity: 0.5;
+}
+
+#price_range::-webkit-slider-thumb:hover {
+   box-shadow: 0 1rem 3rem 1rem var(--soft-cyan);
+}
+
+.pricing {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem; /* between price & per month */
+   font-size: 3rem;
+   color: var(--dark-saturated-blue);
+   font-weight: var(--font-weight-800);
+}
+
+@media (min-width: 768px) {
+   .pricing {
+      position: absolute;
+      top: 0;
+      right: 3rem;
+      font-size: 3rem;
+   }
+}
+
+.per_month {
+   font-size: 1.5rem;
+   color: var(--grayish-blue);
+   font-weight: var(--font-weight-600);
+}
+
+.billing {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem; /* between montly toggle & yearly */
+   width: 100%;
+   padding: 0 0.5rem;
+   position: relative;
+}
+
+@media (min-width: 768px) {
+   .billing {
+      justify-content: flex-end;
+   }
+}
+
+#switch_billing {
+   appearance: none;
+   max-width: 4.5rem;
+   width: 100%;
+   height: 2.2rem;
+   border-radius: 2rem;
+   background: var(--light-grayish-blue-toggle);
+   outline: none;
+   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+   #switch_billing {
+      width: 100%;
+   }
+}
+
+#switch_billing:checked {
+   background: var(--strong-cyan);
+}
+
+#switch_billing::before {
+   content: "";
+   width: 1.5rem;
+   height: 1.5rem;
+   background: var(--white);
+   border-radius: 50%;
+   position: absolute;
+   top: 0.32rem;
+   transform: translateX(35%);
+   transition: all 300ms ease-in-out;
+}
+
+#switch_billing:checked::before {
+   transform: translateX(170%);
+}
+
+.yearly {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem; /* between yearly & 25% discount */
+}
+
+.discount_amount {
+   color: var(--light-red);
+   background: var(--light-grayish-red);
+   border-radius: 3rem;
+   padding: 0.3rem 0.5rem;
+   font-size: 1rem;
+}
+
+.discount {
+   display: none;
+}
+
+@media (min-width: 768px) {
+   .discount {
+      display: inline-block;
+   }
+}
+
+.benefits {
+   padding-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem; /* between include & trial btn */
+   text-align: center;
+   border-top: 0.1rem solid var(--light-grayish-blue-empty);
+}
+
+.benefits .include {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem; /*between each included benefit */
+}
+
+@media (min-width: 768px) {
+   .benefits {
+      padding: 4rem 3rem 2rem 3rem;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+   }
+}
+
+.benefits p img {
+   padding-right: 1.5rem;
+}
+
+.trial_btn_container {
+   margin-top: 2rem;
+}
+
+.trial_btn {
+   padding: 1rem 4.5rem;
+   border-radius: 3rem;
+   border: 0.1rem solid var(--dark-saturated-blue);
+   background: var(--dark-saturated-blue);
+   color: var(--pale-blue);
+}
+
+.trial_btn:hover {
+   color: var(--white);
+   cursor: pointer;
+}
+
+footer {
+   font-family: var(--font-fam-monospace);
+   font-size: 1.2rem;
+   text-align: center;
+   padding: 1rem;
+   font-weight: var(--font-weight-400);
+}
+
+footer a {
+   text-decoration: none;
+   color: var(--dark-saturated-blue);
+}
