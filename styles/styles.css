@@ -106,7 +106,7 @@ header {
 
 @media (min-width: 768px) {
    .main_content {
-      max-width: 45rem;
+      max-width: 50rem;
    }
 }
 
@@ -148,6 +148,10 @@ header {
       left: 3rem;
       text-align: left;
    }
+}
+
+label {
+   display: none;
 }
 
 #price_range {
@@ -217,7 +221,7 @@ header {
 .billing {
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: end;
    gap: 1rem; /* between montly toggle & yearly */
    width: 100%;
    padding: 0 0.5rem;
@@ -227,6 +231,7 @@ header {
 @media (min-width: 768px) {
    .billing {
       justify-content: flex-end;
+      gap: 3.5rem; /* between montly toggle & yearly */
    }
 }
 
