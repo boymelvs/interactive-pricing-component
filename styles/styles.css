@@ -150,10 +150,6 @@ header {
    }
 }
 
-label {
-   display: none;
-}
-
 #price_range {
    appearance: none;
    width: 100%;
